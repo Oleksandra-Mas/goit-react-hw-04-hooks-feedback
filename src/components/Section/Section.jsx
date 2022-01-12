@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import styles from './Section.module.scss';
+import styles from './Section.module.css';
 
 export default function Section({ title, children }) {
     return (

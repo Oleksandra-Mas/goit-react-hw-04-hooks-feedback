@@ -1,5 +1,3 @@
-@import 'styles/base.scss';
-
 .section {
     display: flex;
     flex-direction: column;

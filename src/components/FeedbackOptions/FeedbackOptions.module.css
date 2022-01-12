@@ -1,12 +1,8 @@
-@import 'styles/shared.scss';
 .feedback_list {
-    @extend %list;
     display: flex;
 }
-.item {
-    & + & {
-        margin-left: 10px;
-    }
+.item + .item {
+    margin-left: 10px;
 }
 
 .button {
@@ -33,19 +29,20 @@
     position: relative;
     text-align: center;
     text-transform: none;
-    transition: box-shadow 280ms $timing-function, opacity 15ms linear 30ms,
-        transform 270ms var(--timing-function) 0ms;
+    transition: box-shadow 280ms var(--timing-function),
+        opacity 15ms linear 30ms, transform 270ms var(--timing-function) 0ms;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
     width: auto;
     will-change: transform, opacity;
     z-index: 0;
-    &:hover,
-    &:focus {
-        background: #f6f9fe;
-        color: $indigo-accent;
-        outline: none;
-        border: 2px solid $indigo;
-    }
+}
+
+.button:hover,
+.button:focus {
+    background: #f6f9fe;
+    color: var(--indigo-accent);
+    outline: none;
+    border: 2px solid var(--indigo);
 }
